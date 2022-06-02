@@ -1,4 +1,4 @@
-package com.reactive.core;
+package com.reactive.core.mono;
 
 import com.reactive.util.Util;
 import reactor.core.publisher.Mono;
@@ -9,7 +9,7 @@ public class MonoFromSupplier {
 
     public static void main(String[] args) {
 
-        Supplier<String> monoSupplier = () -> getName();
+        Supplier<String> monoSupplier = MonoFromSupplier::getName;
         Mono<String> mono = Mono.fromSupplier(monoSupplier);
 
         mono.subscribe(Util.onNext());
