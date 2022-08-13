@@ -10,8 +10,8 @@ public class FluxGenerate {
         Flux.generate(synchronousSink -> {
             synchronousSink.next(Util.faker().country().name());
          }).log()
-                .take(3)
-                .log()
-                .subscribe(Util.subscriber());
+           .take(3)
+           .log()
+           .subscribe(Util.subscriber());
     }
 }

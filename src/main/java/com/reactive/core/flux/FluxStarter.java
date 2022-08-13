@@ -12,6 +12,5 @@ public class FluxStarter {
 
         flux.subscribe(Util.onNext());
 
-
     }
 }
